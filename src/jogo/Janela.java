@@ -13,7 +13,7 @@ public class Janela {
 	private JFrame janela = new JFrame();
 	
 	//Largura e altura da janela
-	private int larguraJanela = 750;
+	private int larguraJanela;
 	private int alturaJanela = 600;
 	
 	//Painel no Jframe
@@ -24,6 +24,8 @@ public class Janela {
 	
 	//Metodo construtor
 	Janela(int qtdCopos) {
+		this.qtdCopos = qtdCopos;
+	    this.larguraJanela = 355 + (qtdCopos*50);
 		this.painel.setBackground(Color.black); // Define a cor de fundo do painel
 		this.janela.setBackground(Color.black); // Define a cor de fundo da janela
 		this.janela.setContentPane(painel); // Define painel principal
@@ -32,7 +34,6 @@ public class Janela {
 	    this.janela.setResizable(false); // Não pode ser redimensionada
 	    this.janela.setVisible(true); // Visivel true
 	    this.janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // Exit on close
-	    this.qtdCopos = qtdCopos;
 	    }
 	
 	//Adiciona o cronometro ao Painel

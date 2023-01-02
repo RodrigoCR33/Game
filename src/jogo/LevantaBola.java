@@ -10,14 +10,13 @@ public class LevantaBola extends BolasCopos {
 	
 	int posicaoBolaLimpar;
 	boolean clique = false;
+	//Variavel para armazenar a posicao a da bola a ser levantada 
+		private int posicaoBolaLevantar;
 	
 	LevantaBola(int qtdCopos) {
 		super(qtdCopos);
 		// TODO Auto-generated constructor stub
 	}
-
-	//Variavel para armazenar a posicao a da bola a ser levantada 
-	private int posicaoBolaLevantar;
 
 	//Funcao setPosicaoBolaLevantar
 	public void setPosicaoBolaLevantar(int posicaoBolaLevantar) {

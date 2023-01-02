@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
@@ -22,14 +21,16 @@ public class Cronometro extends BolasCopos {
 	// Variável para armazenar o tempo decorrido, iniciando em 0
 	private int tempo = 0;
 
+	// Variável para armazenar a qtd de copos cheios
 	private int coposCheios = 0;
 
-	@SuppressWarnings("unused")
+	// Variavel para criar o timer
 	private Timer timer;
 
 	// Componente de texto para exibir o tempo
 	private JLabel labelTempo = new JLabel("Tempo: 0s");
 	private JLabel parabens = new JLabel("Parabens!!!");
+	//
 
 	public void iniciarCronometro(JPanel painel) {
 
@@ -58,7 +59,7 @@ public class Cronometro extends BolasCopos {
 				tempo++;
 				
 				// Texto tempo
-				labelTempo.setText("Tempo: " + tempo + "s");
+				labelTempo.setText("Tempo: " + tempo + "s");	
 				
 				//Checa se os copos estao cheios com as cores certas
 				checarCopos(painel);
