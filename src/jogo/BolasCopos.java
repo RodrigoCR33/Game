@@ -40,9 +40,7 @@ public class BolasCopos extends JPanel {
 	private BufferedImage image;
 
 	// Construtor que grava as posicoes automaticamente e salva a var
-	BolasCopos(int qtdCopos) {
-		
-		BolasCopos.qtdCopos = qtdCopos;
+	BolasCopos() {
 		
 		// Grava as posicoes das bolas na tela
 		gravarPosicoes();
@@ -77,11 +75,12 @@ public class BolasCopos extends JPanel {
 
 		int espacamento = 180;
 		int[] coordenadasY = { 75, 125, 175, 225, 335, 385, 435, 485 };
-
+		
 		for (int i = 0; i < qtdCopos / 2; i++) {
 			int x = 80 + i * espacamento;
 
 			for (int j = 0; j < coordenadasY.length; j++) {
+				System.out.println();
 				BolasCopos.posicoes[i + j * qtdCopos / 2] = new Point(x, coordenadasY[j]);
 
 			}
@@ -125,6 +124,8 @@ public class BolasCopos extends JPanel {
 			}		
 		}
 		
+		System.out.println(color);
+		
 		return color = Color.black;
 
 	}
@@ -147,7 +148,7 @@ public class BolasCopos extends JPanel {
 	// Desenhar Bolas
 	private void desenhaBolas(Graphics g, Point[] posicoes) {
 		for (int i = 0; i < qtdBolas; i++) {
-
+			
 			// Obtem a cor da bola a ser pintada
 			Color cor = gravarCores(i, cores);
 

@@ -9,11 +9,8 @@ public class Main {
 
 		// TODO Auto-generated method stub
 		
-		// Ate o momento o jogo só esta funcionando com 8 copos
-		int qtdCopos = 8;
-		
 		//	Cria a janela
-		Janela janela = new Janela(qtdCopos);
+		Janela janela = new Janela();
 		
 		//	Get jframe
 		JFrame jframe = janela.getJFrame();
@@ -22,7 +19,7 @@ public class Main {
 		Graphics g = jframe.getGraphics();	
 		
 		//	Instancia a classe que cria as bolas e os copos
-		BolasCopos bolasCopos = new BolasCopos(qtdCopos);
+		BolasCopos bolasCopos = new BolasCopos();
 		
 		//	Pinta as bolas e os copos
 		bolasCopos.paintComponent(g);
@@ -31,7 +28,7 @@ public class Main {
 		janela.adicionaCronometro();
 		
 		//	Instancia a classe que reconhece o clique do mouse e executa as mecanicas
-		MouseClique mouseClique = new MouseClique(qtdCopos);
+		MouseClique mouseClique = new MouseClique();
 		mouseClique.mouseClique(jframe, g, bolasCopos.getCoresPosicoes());
 		
 	}

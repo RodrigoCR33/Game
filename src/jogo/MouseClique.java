@@ -10,16 +10,11 @@ import javax.swing.JFrame;
 @SuppressWarnings("serial")
 public class MouseClique extends BolasCopos {
 
-	MouseClique(int qtdCopos) {
-		super(qtdCopos);
-		// TODO Auto-generated constructor stub
-	}
-
 	// Instancia classe que transfere as bolas entre os copos
 	private TransfereBola transfereBola = new TransfereBola();
 
 	// Instancia Classe que levanta as bolas
-	private LevantaBola levantaBola = new LevantaBola(qtdCopos);
+	private LevantaBola levantaBola = new LevantaBola();
 
 	// Controle de lógica do clique
 	boolean bolaSelecionada;

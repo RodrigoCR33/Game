@@ -5,11 +5,6 @@ import java.awt.Graphics;
 
 @SuppressWarnings("serial")
 public class TransfereBola extends BolasCopos {
-	
-	TransfereBola() {
-		super(qtdCopos);
-		// TODO Auto-generated constructor stub
-	}
 
 	// Posicao do clique
 	private int posicaoClique = 0;

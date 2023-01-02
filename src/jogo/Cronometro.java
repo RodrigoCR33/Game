@@ -13,11 +13,6 @@ import javax.swing.border.EmptyBorder;
 @SuppressWarnings("serial")
 public class Cronometro extends BolasCopos {
 
-	Cronometro(int qtdCopos) {
-		super(qtdCopos);
-		// TODO Auto-generated constructor stub
-	}
-
 	// Variável para armazenar o tempo decorrido, iniciando em 0
 	private int tempo = 0;
 

@@ -20,12 +20,11 @@ public class Janela {
 	private JPanel painel = new JPanel(new BorderLayout());
 	
 	//Qtd copos
-	private int qtdCopos;
+	private int qtdCopos = 8;
 	
 	//Metodo construtor
-	Janela(int qtdCopos) {
-		this.qtdCopos = qtdCopos;
-	    this.larguraJanela = 355 + (qtdCopos*50);
+	Janela() {
+	    this.larguraJanela = (qtdCopos*95);
 		this.painel.setBackground(Color.black); // Define a cor de fundo do painel
 		this.janela.setBackground(Color.black); // Define a cor de fundo da janela
 		this.janela.setContentPane(painel); // Define painel principal
@@ -38,7 +37,7 @@ public class Janela {
 	
 	//Adiciona o cronometro ao Painel
 	void adicionaCronometro() {
-		Cronometro cronometro = new Cronometro(qtdCopos);
+		Cronometro cronometro = new Cronometro();
 		cronometro.iniciarCronometro(painel);
 	}
 	

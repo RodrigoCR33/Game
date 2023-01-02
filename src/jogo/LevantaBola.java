@@ -12,11 +12,6 @@ public class LevantaBola extends BolasCopos {
 	boolean clique = false;
 	//Variavel para armazenar a posicao a da bola a ser levantada 
 		private int posicaoBolaLevantar;
-	
-	LevantaBola(int qtdCopos) {
-		super(qtdCopos);
-		// TODO Auto-generated constructor stub
-	}
 
 	//Funcao setPosicaoBolaLevantar
 	public void setPosicaoBolaLevantar(int posicaoBolaLevantar) {
@@ -44,7 +39,7 @@ public class LevantaBola extends BolasCopos {
 
 				//escolhe a cor
 				g.setColor(coresPosicoes[posicaoBolaLevantar]);
-				
+								
 				//pinta a bola com 20 pixels para cima
 				g.fillOval((posicoes[posicaoBolaLevantar].x), (posicoes[posicaoBolaLevantar].y - 20), 50, 50);
 				
